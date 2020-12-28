@@ -135,7 +135,7 @@ class _UploaderState extends State<Uploader> {
   StorageUploadTask _uploadTask;
 
   _startUpload() {
-    String filePath = 'images/${DateTime.now()}.png';
+    String filePath = 'images/${DateTime.now()}.jpg';
 
     setState(() {
       _uploadTask = _storage.ref().child(filePath).putFile(widget.file);
