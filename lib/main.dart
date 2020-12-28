@@ -22,6 +22,8 @@ class MyApp extends StatelessWidget {
 /// Widget to capture and crop the image
 class ImageCapture extends StatefulWidget {
   createState() => _ImageCaptureState();
+
+  static pickImage({ImageSource source}) {}
 }
 
 class _ImageCaptureState extends State<ImageCapture> {
@@ -38,7 +40,7 @@ class _ImageCaptureState extends State<ImageCapture> {
         // maxHeight: 512,
         toolbarColor: Colors.purple,
         toolbarWidgetColor: Colors.white,
-        toolbarTitle: 'Crop It');
+        toolbarTitle: 'Crop Photo');
 
     setState(() {
       _imageFile = cropped ?? _imageFile;
